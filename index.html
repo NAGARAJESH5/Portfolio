@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="mystyle.css">
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <title>Portfolio | Ludiflex</title>
+    <style>
+/* Basic reset and box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 1;
+    min-width: 300px; /* Adjust this value based on your design */
+    margin: 10px;
+}
+
+.about-info {
+    padding: 20px;
+}
+
+.skill {
+    padding: 20px;
+}
+
+.skill-box {
+    padding-left: 50px;
+    margin-bottom: 20px; /* Increased space between skill boxes */
+    width: 300%; /* Ensure skill box takes full width of its container */
+}
+
+.skill-bar {
+    position: relative;
+    height: 25px; /* Increased height for a larger bar */
+    background: #e0e0e0; /* Light gray background for the full bar */
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%; /* Ensures the bar takes full width of the skill box */
+}
+
+.skill-per {
+    display: block;
+    height: 100%;
+    background: #2196F3; /* Blue color for the experienced level */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+    text-align: center;
+    color: #fff;
+    line-height: 30px; /* Center text vertically */
+    font-size: 16px; /* Larger font size for better readability */
+}
+
+.tooltip {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #333;
+    color: #fff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+    </style>
+</head>
+<body>
+   <div class="container">
+    <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Rajesh</p>
+            <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list">
+                    <a href="#home" class="nav-link active-link">Home</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#about" class="nav-link">About</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <div class="circle"></div>
+                </li>
+                <li class="nav_list">
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="featured-box" id="home">
+          <div class="featured-text">
+            <!-- <div class="featured-text-card">
+                <span>Rajesh</span>
+            </div> -->
+            <div class="featured-name">
+                <p>Hello I'm </p>
+            </div>
+            <div class="featured-text-info">
+                <p>My name is Rajesh I'm a Front End Developer</p>
+            </div>
+            <div class="featured-text-btn">
+                <button class="btn blue-btn">Hire Me</button>
+                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+            </div>
+            <div class="social_icons">
+                <div class="icon"><a href=""><i class="uil uil-instagram"></i></a></div>
+                <div class="icon"><a href="https://www.linkedin.com/in/naga-rajesh-39b805265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="uil uil-linkedin-alt"></i></a></div>
+                <div class="icon"><a href=""><i class="uil uil-facebook"></i></a></div>
+                <div class="icon"><a href="https://github.com/NAGARAJESH5"><i class="uil uil-github-alt"></i></a></div>
+            </div>
+          </div>
+          <div class="featured-image">
+            <div class="image">
+                <img src="download.jpg" alt="avatar">
+            </div>
+       </section>
+<!-- -------------- ABOUT BOX ---------------- -->
+<section class="section" id="about">
+    <div class="top-header">
+        <h1>About Me</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="about-info">
+                <h3>My introduction</h3>
+                <p>I’m a front-end developer skilled in HTML, CSS, and JavaScript, with a basic grasp of modern frameworks. I create engaging, user-friendly websites and manage dynamic content with CMS platforms like WordPress.</p>
+                <div class="about-btn">
+                    <button class="btn">Download CV <i class="uil uil-import"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="skill">
+                <div class="skill-box">
+                    <span class="title">HTML</span>
+                    <div class="skill-bar">
+                        <span class="skill-per" style="width: 80%;">80%</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">CSS</span>
+                    <div class="skill-bar">
+                        <span class="skill-per" style="width: 70%;">70%</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">JavaScript</span>
+                    <div class="skill-bar">
+                        <span class="skill-per" style="width: 40%;">40%</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <span class="title">Bootstrap</span>
+                    <div class="skill-bar">
+                        <span class="skill-per" style="width: 65%;">65%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+       <!-- -------------- PROJECT BOX ---------------- -->
+
+       <section class="section" id="projects">
+          <div class="top-header">
+              <h1>Projects</h1>
+          </div>
+          <div class="project-container">
+            <div class="project-box">
+                <i class="uil uil-briefcase-alt"></i>
+                <h3>Completed</h3>
+                <label>1 Finished Projects</label>
+            </div>
+            <div class="project-box">
+                <i class="uil uil-users-alt"></i>
+                <h3>Clients</h3>
+                <label>No Clients</label>
+            </div>
+            <div class="project-box">
+                <i class="uil uil-award"></i>
+                <h3>Experience</h3>
+                <label>Fresher in Front End Development</label>
+            </div>
+          </div>
+       </section>
+
+       <!-- -------------- CONTACT BOX ---------------- -->
+
+       <section class="section" id="contact">
+          <div class="top-header">
+            <h1>Get in touch</h1>
+            <span>Do you have a project in your mind, contact me here</span>
+          </div>
+          <div class="row">
+             <div class="col">
+                <div class="contact-info">
+                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"></i> Email: suryaprakash767899@gmail.com</p>
+                    <p><i class="uil uil-phone"></i> Tel: +91 1234567890</p>
+                </div>
+             </div>
+             <div class="col">
+                <div class="form-control">
+                    <div class="form-inputs">
+                        <input type="text" class="input-field" placeholder="Name">
+                        <input type="text" class="input-field" placeholder="Email">
+                    </div>
+                    <div class="text-area">
+                        <textarea placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button class="btn">Send <i class="uil uil-message"></i></button>
+                    </div>
+                </div>
+             </div>
+          </div>
+       </section>
+
+    </main>
+
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+        <div class="footer-social-icons">
+            <div class="icon"><a href=""><i class="uil uil-instagram"></i></a></div>
+            <div class="icon"><a href="https://www.linkedin.com/in/naga-rajesh-39b805265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="uil uil-linkedin-alt"></i></a></div>
+            <div class="icon"><a href=""><i class="uil uil-facebook"></i></a></div>
+            <div class="icon"><a href="https://github.com/NAGARAJESH5"><i class="uil uil-github-alt"></i></a></div>  
+          </div>
+    
+        <div class="top-footer">
+            <p>&copy; 2024 Rajesh. All rights reserved.</p>
+        </div>
+    </footer>
+   </div>
+
+   <script>
+        function myMenuFunction() {
+            var navMenu = document.getElementById("myNavMenu");
+            navMenu.classList.toggle("nav-menu-show");
+        }
+   </script>
+   <script src="javasacript.js"></script>
+</body>
+</html>
